@@ -1,0 +1,12 @@
+It feels great, when we Rewind our past.
+This App does the same, It will fetch all "Status Updates" shared publicly (does not include Check In, Photo uploads or any other than status) from your Facebook account, for you in a single place. Then Classify those Statuses based on it's updation date. App will let you choose the year and month for displaying those statuses.
+
+Those little, long, crazy, stupid and some serious status updates..!
+
+With this App, you can Rewind your all of those memorable moments shared in Facebook Account's Status Updates.
+
+This App is Windows 8 version of www.fbcalendar.in
+This App will not store your facebook profile information in local storage or any other storage.
+This App does not need to log out from facebook account, as the app will close the session by default after closing the app. If you Login again, then app will close the session of previous user.
+
+Hope you enjoy this..!!!

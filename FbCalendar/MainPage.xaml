@@ -1,0 +1,270 @@
+﻿<common:LayoutAwarePage
+    x:Class="FbCalendar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FbCalendar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:FbCalendar.Common"
+    mc:Ignorable="d"
+    xmlns:callisto ="using:Callisto.Controls">
+
+
+    <Grid Background="#FFE9E7EE">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="151*"/>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="196*"/>
+            <RowDefinition Height="152*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="650*"/>
+            <ColumnDefinition Width="149*"/>
+            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ApplicationViewStates">
+
+                <VisualState x:Name="FullScreenLandscape" >
+
+                </VisualState>
+
+                <VisualState x:Name="Filled">
+                	<Storyboard>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock2">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_tb_hello">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_tb_welcome">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_sp_ntSupported">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                	</Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="FullScreenPortrait">
+                	<Storyboard>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock2">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_tb_hello">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_tb_welcome">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_sp_ntSupported">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                	</Storyboard>
+                </VisualState>
+
+                <VisualState x:Name="Snapped">
+
+                	<Storyboard>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock1">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock2">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_tb_hello">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_tb_welcome">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="snapView_sp_ntSupported">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Visible</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                	</Storyboard>
+
+                </VisualState>
+
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
+
+
+        <callisto:CustomDialog x:Name="customDialog_alreadySignedIn" x:FieldModifier="public"
+                               Title="FbCalendar" Background="#FF3D5B99"
+                               BackButtonVisibility="Visible" BackButtonClicked="customDialogBackButton">
+            
+            <StackPanel Orientation="Vertical" x:Name="mainStackPanel" Margin="0,5">
+                <TextBlock FontFamily="candara" Text="You are already Singed In to Facebook." FontSize="20" Margin="0,10,0,10" />
+                <!--<TextBlock Text="Would you like to Login again..?" FontSize="20" FontFamily="Candara" Margin="0,5" />-->
+
+                <StackPanel Orientation="Horizontal" Margin="0,5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    
+                    <Button Content="Continue" Tapped="ContinueOnTapped" Margin="0,10,10,0" />
+                    <Button Content="Login again" Tapped="LoginAgainOnTapped" Margin="0,10,10,0" />
+                    
+                </StackPanel>
+                
+            </StackPanel>
+            
+        </callisto:CustomDialog>
+        
+        
+        
+        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Hello" FontSize="70" FontFamily="Segoe UI" Grid.Column="1" Grid.Row="1" Foreground="#FF4962A4" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="textBlock1" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" Text="Welcome to FbCalendar" FontSize="55" FontFamily="Segoe UI" Foreground="#FF4962A4" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="textBlock2" Grid.Column="1" Margin="0" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Segoe UI" Foreground="#FF4962A4" FontSize="27" Grid.RowSpan="2">
+        	<Run Text="- Rewind your memories, you shared in status"/>
+        	<LineBreak/>
+        	<Run Text="   updates."/>
+        	<LineBreak/>
+        	<Run Text="- Those little, long, crazy, stupid and some serious"/>
+        	<LineBreak/>
+        	<Run Text="   status updates !"/>
+        	<LineBreak/>
+        	<Run Text="- With easy navigation &amp; awesome UI."/>
+        </TextBlock>
+        <Grid x:Name="grid" Grid.Column="3" Margin="0" Grid.Row="4" Grid.RowSpan="2" Background="#FF3B579D" Tapped="FbLogin">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="13*"/>
+                <ColumnDefinition Width="243*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="0" VerticalAlignment="Bottom" Grid.Column="1" Height="90">
+                <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Login with" FontSize="25" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="Facebook" FontSize="45" FontFamily="Segoe UI" Foreground="White"/>
+            </StackPanel>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="130" Margin="10,10,0,0" VerticalAlignment="Top" Width="86" Source="Assets/FBlogo.png"/>
+        </Grid>
+        <Rectangle x:Name="rectDark" Grid.ColumnSpan="5" Fill="Black" Margin="0" Grid.RowSpan="7" Stroke="Black" Opacity="0.35" Visibility="Collapsed"/>
+        <ProgressRing IsActive="False" x:Name="progressRing" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="7" Grid.ColumnSpan="5" Width="100" Height="100" Foreground="White"/>
+        <StackPanel x:Name="loading_stackPanel" HorizontalAlignment="Center" VerticalAlignment="Bottom" Grid.RowSpan="7" Grid.ColumnSpan="5" Margin="0,0,0,40" Visibility="Collapsed">
+            <TextBlock TextWrapping="Wrap" Text="Fetching your Statuses..." Foreground="White" FontSize="30" HorizontalAlignment="Center"/>
+            <TextBlock TextWrapping="Wrap" Text="This depends on number of status updates" FontSize="30" Foreground="White"/>
+        </StackPanel>
+        <TextBlock x:Name="snapView_tb_hello" TextWrapping="Wrap" Text="Hello" FontSize="40" FontFamily="Segoe UI" Grid.Row="1" Foreground="#FF4962A4" HorizontalAlignment="Center" Grid.ColumnSpan="5" Visibility="Collapsed"/>
+        <TextBlock x:Name="snapView_tb_welcome" Grid.Row="2" TextWrapping="Wrap" Text="Welcome to FbCalendar" FontSize="26.667" FontFamily="Segoe UI" Foreground="#FF4962A4" HorizontalAlignment="Center" Grid.ColumnSpan="5" Visibility="Collapsed"/>
+        <StackPanel x:Name="snapView_sp_ntSupported" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="5" Margin="20,0" Grid.Row="5" Visibility="Collapsed">
+        	<TextBlock TextWrapping="Wrap" Text="To view the application, move to Fullscreen Landscape." Foreground="#FF4962A4" FontSize="20" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    
+        
+    </Grid>
+
+</common:LayoutAwarePage>
